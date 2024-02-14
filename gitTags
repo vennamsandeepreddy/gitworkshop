@@ -1,6 +1,12 @@
 What are tags?
 In Git, tags are used to label specific commits in a repository’s history. They serve as reference points, making it easier to identify and access important milestones, releases, or significant points in the project’s development. Tags can be attached to commits, branches, or even individual files. They provide a way to mark specific versions of your project and provide a stable reference for future use.
 
+Difference between Tags and Releases
+Tags: Tag is a git concept. It is a pointer to a specific commit. This pointer can be supercharged with some additional information (identity of the creator of the tag, a description, a GPG signature, etc).
+
+Release: Release is an abstract concept of GitHub. A Release is created from an existing tag and exposes release notes and links to download the software or source code from GitHub. Releases are used to bundle and deliver iterations of a project to users.
+
+
 Different kinds of tags
 Lightweight Tags:
 Lightweight tags are simply pointers to specific commits without any additional metadata. They are created using the git tag command followed by the tag name. For example:
@@ -35,3 +41,4 @@ git push origin --tags: Pushes all tags to a remote repository.
 git fetch --tags: Fetches tags from a remote repository.
 git checkout <tag-name>: Checks out the commit associated with the specified tag, creating a detached HEAD state.
 git tag -n: Running this command will list all the tags in your repository along with their associated annotation messages.
+
